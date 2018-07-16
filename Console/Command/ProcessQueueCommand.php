@@ -17,7 +17,9 @@ class ProcessQueueCommand extends Command
 {
 
     private $_queue;
+
     private $_state;
+
 
     /**
      * @param State $state
@@ -25,7 +27,9 @@ class ProcessQueueCommand extends Command
      */
     public function __construct(State $state, Queue $queue)
     {
+
 	$this->_state = $state;
+
         $this->_queue = $queue;
         parent::__construct();
     }
@@ -47,7 +51,9 @@ class ProcessQueueCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+
 	 $this->_state->setAreaCode(\Magento\Framework\App\Area::AREA_FRONTEND); 
+
         $success = $this->_queue->runNextJob();
         if ($success === true) {
             $output->writeln("Queue Processed.");
