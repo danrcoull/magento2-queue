@@ -27,7 +27,6 @@ class Process
     {
         $this->_state = $state;
         $this->_queue = $queue;
-        parent::__construct();
     }
 
     /**
