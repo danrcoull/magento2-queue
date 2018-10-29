@@ -39,7 +39,7 @@ class Process
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $this->_state->setAreaCode(\Magento\Framework\App\Area::AREA_FRONTEND);
-        $success = $this->_queue->runNextJob();
+        $success = $this->_queue->process();
         if ($success === true) {
             $output->writeln("Queue Processed.");
         } elseif ($success === false) {
