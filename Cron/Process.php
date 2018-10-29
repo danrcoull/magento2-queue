@@ -35,7 +35,7 @@ class Process
      *
      * @return string
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    public function execute(InputInterface $input, OutputInterface $output)
     {
         $this->_state->setAreaCode(\Magento\Framework\App\Area::AREA_FRONTEND);
         $success = $this->_queue->process();
