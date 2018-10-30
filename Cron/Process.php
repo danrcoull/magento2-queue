@@ -35,7 +35,7 @@ class Process
      *
      * @return string
      */
-    public function execute(InputInterface $input, OutputInterface $output)
+    public function execute(\Symfony\Component\Console\Input\InputInterface $input, \Symfony\Component\Console\Output\OutputInterface $output)
     {
         $this->_state->setAreaCode(\Magento\Framework\App\Area::AREA_FRONTEND);
         $success = $this->_queue->process();
