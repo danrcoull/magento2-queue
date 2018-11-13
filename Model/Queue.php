@@ -178,7 +178,7 @@ class Queue extends AbstractModel
     public function process()
     {
         $maxJobs = $this->scopeConfig->getValue('springbot/queue/max_jobs');
-        $maxJobs=20;
+        $maxJobs=500;
 
         for ($i = 1; $i <= $maxJobs; $i++) {
             $this->runNextJob();

@@ -5,7 +5,7 @@
     <default>
         <springbot>
             <queue>
-                <max_jobs>50</max_jobs>
+                <max_jobs>100</max_jobs>
             </queue>
         </springbot>
     </default>

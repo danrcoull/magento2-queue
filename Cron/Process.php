@@ -39,12 +39,5 @@ class Process
     {
         //$this->_state->setAreaCode(\Magento\Framework\App\Area::AREA_FRONTEND);
         $success = $this->_queue->process();
-        if ($success === true) {
-            $output->writeln("Queue Processed.");
-        } elseif ($success === false) {
-            $output->writeln("Job failed.");
-        } else {
-            $output->writeln("No jobs in queue.");
-        }
     }
 }
